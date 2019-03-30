@@ -5,6 +5,10 @@ MTH229 Projects
 
 These are a collection of `IJUlia` notebooks.
 
+They can be cloned and run on a local jupyter or jupyterhub installation.
+
+They can be used within binder by clicking the link above.
+
 They can be used within `juliabox.com` by using the "Sync" tab:
 
 * Click the "Sync" tab
@@ -14,6 +18,3 @@ They can be used within `juliabox.com` by using the "Sync" tab:
 * the folder name can be changed if desired.
 
 * click the "+" button under "Action"
-
-
-
