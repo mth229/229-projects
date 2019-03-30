@@ -123,8 +123,8 @@ uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
 
 [[MTH229]]
-deps = ["Compat", "ForwardDiff", "LinearAlgebra", "Pkg", "Plots", "QuadGK", "Reexport", "Roots", "SpecialFunctions", "SymPy"]
-git-tree-sha1 = "c6a8b4c56e1e796dbae01c8e34b82c77d0f4bab6"
+deps = ["Compat", "ForwardDiff", "LinearAlgebra", "Pkg", "Plots", "QuadGK", "Reexport", "Roots", "SpecialFunctions", "SymPy", "Test"]
+git-tree-sha1 = "e02ca100d61e5398ba7e4f66637c8078415ddb45"
 repo-rev = "master"
 repo-url = "https://github.com/mth229/MTH229.jl"
 uuid = "59eb3160-e194-5db5-af16-b9d28ff7b512"
