@@ -3,7 +3,7 @@ Launch [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/mt
 
 MTH229 Projects
 
-These are a collection of `IJUlia` notebooks.
+These are a collection of `IJulia` notebooks.
 
 They can be cloned and run on a local jupyter or jupyterhub installation.
 
