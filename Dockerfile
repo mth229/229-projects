@@ -79,7 +79,7 @@ using Revise \n\
 
 # Install Julia Package
 RUN julia -E 'using Pkg; \
-Pkg.add(["Plots", "GR", "PyCall", "SymPy"]); \
+Pkg.add(["Plots", "GR", "PyCall", "DataFrames"]); \
 Pkg.add(PackageSpec(url="https://github.com/mth229/MTH229.jl.git")); \
 Pkg.add(PackageSpec(url="https://github.com/KristofferC/PackageCompilerX.jl.git",rev="master")); \
 using PackageCompilerX; # for precompilation\
@@ -88,9 +88,9 @@ using PackageCompilerX; # for precompilation\
 # Do Ahead of Time Compilation using PackageCompilerX
 # For some technical reason, we switch default user to root then we switch back again
 USER root
-RUN julia --trace-compile="traced.jl" -e 'using OhMyREPL, Revise, Plots, PyCall, SymPy' && \
+RUN julia --trace-compile="traced.jl" -e 'using OhMyREPL, Revise, Plots, PyCall' && \
     julia -e 'using PackageCompilerX; \
-              PackageCompilerX.create_sysimage([:OhMyREPL, :Revise, :Plots, :GR, :PyCall, :SymPy]; precompile_statements_file="traced.jl", replace_default=true) \
+              PackageCompilerX.create_sysimage([:OhMyREPL, :Revise, :Plots, :GR, :PyCall]; precompile_statements_file="traced.jl", replace_default=true) \
              ' && \
     rm traced.jl
 # Make NB_USER Occupy julia binary
