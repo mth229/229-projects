@@ -88,9 +88,9 @@ using PackageCompilerX; # for precompilation\
 # Do Ahead of Time Compilation using PackageCompilerX
 # For some technical reason, we switch default user to root then we switch back again
 USER root
-RUN julia --trace-compile="traced.jl" -e 'using OhMyREPL, Revise, Plots, PyCall' && \
+RUN julia --trace-compile="traced.jl" -e 'using OhMyREPL, Revise, Plots, PyCall, MTH229' && \
     julia -e 'using PackageCompilerX; \
-              PackageCompilerX.create_sysimage([:OhMyREPL, :Revise, :Plots, :GR, :PyCall]; precompile_statements_file="traced.jl", replace_default=true) \
+              PackageCompilerX.create_sysimage([:OhMyREPL, :Revise, :Plots, :GR, :PyCall, "MTH229]; precompile_statements_file="traced.jl", replace_default=true) \
              ' && \
     rm traced.jl
 # Make NB_USER Occupy julia binary
