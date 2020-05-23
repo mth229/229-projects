@@ -98,8 +98,8 @@ uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
 
 [[MTH229]]
 deps = ["ForwardDiff", "LinearAlgebra", "QuadGK", "Reexport", "Roots", "SimplePlots", "SpecialFunctions", "SymPy"]
-git-tree-sha1 = "1bcfb715778fc8ca62be614b8bc3febd8c70cb6b"
-repo-rev = "simpleplots"
+git-tree-sha1 = "3a726d375abed3ff714ca65aa4877696d5c1e9e6"
+repo-rev = "master"
 repo-url = "https://github.com/mth229/MTH229.jl"
 uuid = "ebaf19f5-aa55-568f-9bb2-d6722dad893b"
 version = "0.2.1"
