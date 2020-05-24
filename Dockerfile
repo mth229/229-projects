@@ -73,8 +73,6 @@ let\n\
         end\n\
     end\n\
 end\n\
-using OhMyREPL \n\
-using Revise \n\
 ' >> ${HOME}/.julia/config/startup.jl
 
 # Install Julia Package
