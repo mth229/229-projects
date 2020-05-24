@@ -89,7 +89,7 @@ using PackageCompilerX; # for precompilation\
 USER root
 RUN julia --trace-compile="traced.jl" -e 'using Roots,  ForwardDiff, QuadGK' && \
     julia -e 'using PackageCompilerX; \
-              PackageCompilerX.create_sysimage([:SimplePlots, :Roots, :SymPy, :ForwardDiff, :QuadGK]; precompile_statements_file="traced.jl", replace_default=true) \
+              PackageCompilerX.create_sysimage([:Roots, :SymPy, :ForwardDiff, :QuadGK]; precompile_statements_file="traced.jl", replace_default=true) \
              ' && \
     rm traced.jl
 # Make NB_USER Occupy julia binary
