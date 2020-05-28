@@ -120,8 +120,8 @@ uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
 
 [[MTH229]]
-deps = ["ForwardDiff", "LinearAlgebra", "QuadGK", "Reexport", "Roots", "SimplePlots", "SpecialFunctions", "SymPy"]
-git-tree-sha1 = "b6a7ba09ab633a1c05ecd9447fa1225ef90bcf22"
+deps = ["ForwardDiff", "LinearAlgebra", "QuadGK", "Reexport", "Requires", "Roots", "SimplePlots", "SpecialFunctions", "SymPy"]
+git-tree-sha1 = "af49997d0e705d0a5ba093a0c58a0f714bb6e598"
 repo-rev = "master"
 repo-url = "https://github.com/mth229/MTH229.jl"
 uuid = "ebaf19f5-aa55-568f-9bb2-d6722dad893b"
@@ -235,6 +235,12 @@ deps = ["Pkg"]
 git-tree-sha1 = "7b1d07f411bc8ddb7977ec7f377b97b158514fe0"
 uuid = "189a3867-3050-52da-a836-e630ba90ab69"
 version = "0.2.0"
+
+[[Requires]]
+deps = ["UUIDs"]
+git-tree-sha1 = "d37400976e98018ee840e0ca4f9d20baa231dc6b"
+uuid = "ae029012-a4dd-5104-9daa-d747884805df"
+version = "1.0.1"
 
 [[Roots]]
 deps = ["Printf"]
