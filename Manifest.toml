@@ -297,9 +297,9 @@ version = "0.32.2"
 
 [[SymPy]]
 deps = ["LinearAlgebra", "PyCall", "RecipesBase", "SpecialFunctions"]
-git-tree-sha1 = "e705993847549d596e6598d72aaef9bb08d2acf5"
+git-tree-sha1 = "e1859b56f61817363b43814ba01a961dd85ff952"
 uuid = "24249f21-da20-56a4-8eb1-6a02cf4ae2e6"
-version = "1.0.20"
+version = "1.0.22"
 
 [[Test]]
 deps = ["Distributed", "InteractiveUtils", "Logging", "Random"]
