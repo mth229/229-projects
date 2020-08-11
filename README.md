@@ -25,7 +25,7 @@ There  are a few idiosyncracies to be aware of:
 * While `Julia` is very happy to express its output using scientific notation, `WeBWorK` is not happy to receive the exact output for an answer. Either replace `e` with `E` (as in `1.23e4` would be `1.23E4`) or use decimals.
 
 
-* For *most* questions with a  numeric answer  it is best to  copy all  16 digits of output. Several  digits are expected to match a  correct answer. For numeric questions where an  estimate is made, say from a graph, this is  significantly relaxed.
+* For *most* questions with a  numeric answer  it is best to  copy all  16 digits of output. Several  digits after the decimal point are expected to match a  correct answer (an absolute tolerance of 0.0001 is used). For numeric questions where an  estimate is made, say from a graph, this is  significantly relaxed.
 
 * If the answer  is to  be a function, the  automatic grader is  expecting just  the  rule  of the function  (an expression).
 
