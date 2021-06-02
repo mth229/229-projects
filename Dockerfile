@@ -131,7 +131,7 @@ ENV["JUPYTER"]=Sys.which("jupyter")\n\
 \n\
 import Pkg\n\
 let\n\
-    pkgs = ["Revise","OhMyREPL"]\n\
+    pkgs = ["OhMyREPL"]\n\
     for pkg in pkgs\n\
         if Base.find_package(pkg) === nothing\n\
             Pkg.add(pkg)\n\
@@ -140,22 +140,18 @@ let\n\
 end\n\
 using OhMyREPL \n\
 enable_autocomplete_brackets(false) \n\
-using Revise \n\
 \n\
 ' >> ${HOME}/.julia/config/startup.jl && cat ${HOME}/.julia/config/startup.jl
 
 # Install Julia Packages
 RUN julia -e 'using Pkg; \
 Pkg.add([\
-    PackageSpec(name="Atom", version="0.12.30"), \
-    PackageSpec(name="Juno", version="0.8.4"), \
     PackageSpec(name="PackageCompiler", version="1.2.5"), \
     PackageSpec(name="OhMyREPL", version="0.5.10"), \
-    PackageSpec(name="ORCA", version="0.5.0"), \
     PackageSpec(name="Plots", version="1.11.0"), \
-    PackageSpec(name="Revise", version="3.1.14"), \
+    PackageSpec(name="Zygote", version="0.6.12"), \    
 ]); \
-Pkg.pin(["PackageCompiler", "Atom", "Juno", "OhMyREPL", "Revise", "Plots", "ORCA"]); \
+Pkg.pin(["PackageCompiler",  "OhMyREPL", "Plots"]); \
 Pkg.add(["Plotly", "PlotlyJS"]); \
 Pkg.add(["Documenter", "Literate", "Weave", "Franklin", "NodeJS"]); \
 using NodeJS; run(`$(npm_cmd()) install highlight.js`); using Franklin; \
@@ -214,7 +210,7 @@ RUN jupyter nbextension uninstall --user webio/main && \
               ' && \
     echo "Done"
 
-COPY ./.statements /tmp
+#COPY ./.statements /tmp
 # generate traced_nb.jl
 RUN jupytext --to ipynb --execute /tmp/nb.jl
 RUN julia -e '\
@@ -233,28 +229,18 @@ RUN xvfb-run julia \
 # update sysimage
 RUN julia -e 'using PackageCompiler; \
               create_sysimage(\
-                  [:Plots, :Revise, :OhMyREPL], \
+                  [:Plots, :OhMyREPL, :Zygote], \
                   precompile_statements_file=["traced_runtests.jl", "/tmp/traced_nb.jl"], \
                   cpu_target = PackageCompiler.default_app_cpu_target(), \
                   replace_default=true, \
               )'
 
-# generate sysimage for Atom/Juno user
-RUN mkdir -p /sysimages && julia -e '\
-    using PackageCompiler; PackageCompiler.create_sysimage(\
-        [:Plots, :Juno, :Atom], \
-        precompile_statements_file="/tmp/atomcompile.jl", \
-        sysimage_path="/sysimages/atom.so", \
-        cpu_target = PackageCompiler.default_app_cpu_target(), \
-    ) \
-    '
 
 WORKDIR /work
 ENV JULIA_PROJECT=/work
 COPY ./requirements.txt /work/requirements.txt
 RUN pip install -r requirements.txt
 COPY ./Project.toml /work/Project.toml
-COPY ./src/MyWorkflow.jl /work/src/MyWorkflow.jl
 
 # Initialize Julia package using /work/Project.toml
 RUN rm -f Manifest.toml && julia -e 'using Pkg; \
