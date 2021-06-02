@@ -30,7 +30,6 @@ Pkg.add([\
     PackageSpec(name="Plots", version="1.11.0"), \
 ]); \
 Pkg.pin(["PackageCompiler", "OhMyREPL",  "Plots"]); \
-Pkg.add(["Plotly", "PlotlyJS"]); \
 '
 # suppress warning for related to GR backend
 ENV GKSwstype=100
