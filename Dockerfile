@@ -18,6 +18,44 @@ RUN apt-get update && \
     && \
     apt-get clean && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/* # clean up
 
+# Install packages for Jupyter Notebook/JupyterLab
+RUN curl -kL https://bootstrap.pypa.io/get-pip.py | python3 && \
+    pip3 install \
+    jupyter \
+    jupyterlab==3.* \
+    jupytext \
+    ipywidgets \
+    jupyter-contrib-nbextensions \
+    jupyter-nbextensions-configurator \
+    jupyter-server-proxy \
+    git+https://github.com/IllumiDesk/jupyter-pluto-proxy.git \
+    jupyterlab_code_formatter autopep8 black
+
+# Install/enable extension for Jupyter Notebook users
+RUN pip3 install jupyter-resource-usage && \
+    jupyter contrib nbextension install --user && \
+    jupyter nbextensions_configurator enable --user && \
+    # enable extensions what you want
+    jupyter nbextension enable select_keymap/main && \
+    jupyter nbextension enable highlight_selected_word/main && \
+    jupyter nbextension enable toggle_all_line_numbers/main && \
+    jupyter nbextension enable equation-numbering/main && \
+    jupyter nbextension enable execute_time/ExecuteTime && \
+    echo Done
+
+# Install/enable extension for JupyterLab users
+RUN jupyter labextension install jupyterlab-topbar-extension && \
+    jupyter labextension install jupyterlab-system-monitor && \
+    jupyter labextension install @hokyjack/jupyterlab-monokai-plus --no-build && \
+    jupyter labextension install @jupyterlab/server-proxy --no-build && \
+    jupyter lab build -y && \
+    jupyter lab clean -y && \
+    npm cache clean --force && \
+    rm -rf ~/.cache/yarn && \
+    rm -rf ~/.node-gyp && \
+    echo Done
+
+
 RUN mkdir -p ${HOME}/.julia/config && \
     echo '\
 # set environment variables\n\
