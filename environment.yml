@@ -1,6 +1,5 @@
 dependencies:
   - sympy
-  - numpy
   - pip
   - pip:
       - julia
