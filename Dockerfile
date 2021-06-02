@@ -34,6 +34,7 @@ Pkg.add(["Plotly", "PlotlyJS"]); \
 
 # suppress warning for related to GR backend
 ENV GKSwstype=100
+'
 
 
 # generate precompile_statements_file
