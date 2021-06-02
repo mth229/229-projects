@@ -53,6 +53,28 @@ ENV GKSwstype=100
 
 
 
+# Install kernel so that `JULIA_PROJECT` should be $JULIA_PROJECT
+RUN jupyter nbextension uninstall --user webio/main && \
+    jupyter nbextension uninstall --user webio-jupyter-notebook && \
+    julia -e '\
+              using Pkg; \
+              Pkg.add(PackageSpec(name="IJulia",version="1.23.2")); \
+	      Pkg.add(PackageSpec(name="WebIO", version="0.8.15")); \
+              Pkg.pin(["IJulia","WebIO"]); \
+              using IJulia, WebIO; \
+              WebIO.install_jupyter_nbextension(); \
+              envhome="/work"; \
+              installkernel("Julia", "--project=$envhome", "--trace-compile=/tmp/traced_nb.jl");\
+              ' && \
+    echo "Done"
+
+COPY ./.statements /tmp
+# generate traced_nb.jl
+RUN jupytext --to ipynb --execute /tmp/nb.jl
+RUN julia -e '\
+    using IJulia; installkernel("Julia", "--project=/work"); \
+'  
+
 # generate precompile_statements_file
 RUN xvfb-run julia \
              --trace-compile=traced_runtests.jl \
