@@ -1,5 +1,22 @@
 FROM julia:1.6.1
 
+RUN apt-get update && \
+    apt-get install -y \
+    build-essential \
+    cmake \
+    python3 \
+    python3-dev \
+    python3-distutils \
+    curl \
+    ca-certificates \
+    git \
+    libgconf-2-4 \
+    xvfb \
+    zip \
+    r-base \
+    libxt6 libxrender1 libxext6 libgl1-mesa-glx libqt5widgets5 # GR \
+    && \
+    apt-get clean && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/* # clean up
 
 RUN mkdir -p ${HOME}/.julia/config && \
     echo '\
