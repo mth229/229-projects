@@ -419,8 +419,8 @@ version = "0.2.4"
 uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
 
 [[MTH229]]
-deps = ["LinearAlgebra", "PlotlyBase", "QuadGK", "Reexport", "Requires", "Roots", "SpecialFunctions", "SymPy", "ZipFile", "Zygote"]
-git-tree-sha1 = "4739b5b3c5b35c9f3aabc2c38ce9aa09a4a40ea6"
+deps = ["LinearAlgebra", "QuadGK", "Reexport", "Requires", "Roots", "SpecialFunctions", "SymPy", "ZipFile", "Zygote"]
+git-tree-sha1 = "f3e5c6a38d8ed9f45a949c863155ee00af89327a"
 repo-rev = "master"
 repo-url = "https://github.com/mth229/MTH229.jl"
 uuid = "ebaf19f5-aa55-568f-9bb2-d6722dad893b"
