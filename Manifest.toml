@@ -396,7 +396,7 @@ uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
 
 [[MTH229]]
 deps = ["ForwardDiff", "LinearAlgebra", "QuadGK", "Reexport", "Requires", "Roots", "SpecialFunctions", "SymPy", "ZipFile"]
-git-tree-sha1 = "46f2fa332e926e51e3b3a17b89fcced09d5d6c77"
+git-tree-sha1 = "f6baaafc67366587153c4f3eb7218f5dd4b809ae"
 repo-rev = "master"
 repo-url = "https://github.com/mth229/MTH229.jl"
 uuid = "ebaf19f5-aa55-568f-9bb2-d6722dad893b"
