@@ -1,6 +1,7 @@
 Launch [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/mth229/229-projects/S20)
 
 
+
 MTH229 Projects
 
 These are a collection of `IJulia` notebooks to support the MTH229 class at the College of Staten Island
@@ -28,4 +29,3 @@ There  are a few idiosyncracies to be aware of:
 * For *most* questions with a  numeric answer  it is best to  copy all  16 digits of output. Several  digits after the decimal point are expected to match a  correct answer (an absolute tolerance of 0.0001 is used). For numeric questions where an  estimate is made, say from a graph, this is  significantly relaxed.
 
 * If the answer  is to  be a function, the  automatic grader is  expecting just  the  rule  of the function  (an expression).
-
