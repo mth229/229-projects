@@ -1,5 +1,0 @@
-dependencies:
-  - sympy
-  - pip
-  - pip:
-      - julia
