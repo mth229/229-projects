@@ -1,4 +1,5 @@
 [deps]
+Accessors = "7d9f7c33-5ae7-4f3b-8dc6-eff91059b697"
 ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
 PlotUtils = "995b91a9-d308-5afd-9ec6-746e21dbc043"
 PlotlyLight = "ca7969ec-10b3-423e-8d99-40f33abb42bf"
