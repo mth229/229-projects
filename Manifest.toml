@@ -430,9 +430,9 @@ version = "1.2.1"
 uuid = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
 
 [[deps.SimpleExpressions]]
-git-tree-sha1 = "8e1de885aa45f38866124102684fcf4e4c144795"
+git-tree-sha1 = "674418eb6053b1dde16608f710710f6698bd7ada"
 uuid = "deba94f7-f32a-40ad-b45e-be020a5ded2f"
-version = "1.0.2"
+version = "1.0.4"
 
     [deps.SimpleExpressions.extensions]
     SimpleExpressionsSpecialFunctionsExt = "SpecialFunctions"
