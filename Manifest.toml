@@ -2,7 +2,7 @@
 
 julia_version = "1.10.0"
 manifest_format = "2.0"
-project_hash = "34026c85708aaa91bea8207bafa7f32261ba0a46"
+project_hash = "5c98f1c2dfa5d6294a48fabb0289851970f5140f"
 
 [[deps.Accessors]]
 deps = ["CompositionsBase", "ConstructionBase", "InverseFunctions", "MacroTools"]
@@ -430,9 +430,9 @@ version = "1.2.1"
 uuid = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
 
 [[deps.SimpleExpressions]]
-git-tree-sha1 = "674418eb6053b1dde16608f710710f6698bd7ada"
+git-tree-sha1 = "7f39349df7889f81c64908b57f717ed45ed6fcc2"
 uuid = "deba94f7-f32a-40ad-b45e-be020a5ded2f"
-version = "1.0.4"
+version = "1.0.5"
 
     [deps.SimpleExpressions.extensions]
     SimpleExpressionsSpecialFunctionsExt = "SpecialFunctions"
