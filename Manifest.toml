@@ -2,7 +2,7 @@
 
 julia_version = "1.10.0"
 manifest_format = "2.0"
-project_hash = "5c98f1c2dfa5d6294a48fabb0289851970f5140f"
+project_hash = "3c5140d1255c830a0456fbac3ab7ea3d6c75464e"
 
 [[deps.Accessors]]
 deps = ["CompositionsBase", "ConstructionBase", "Dates", "InverseFunctions", "LinearAlgebra", "MacroTools", "Test"]
@@ -274,6 +274,14 @@ version = "0.3.26"
 
 [[deps.Logging]]
 uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
+
+[[deps.MTH229Lite]]
+deps = ["ForwardDiff", "LinearAlgebra", "PlotUtils", "PlotlyLight", "QuadGK", "Reexport", "Roots", "SimpleExpressions", "SpecialFunctions"]
+git-tree-sha1 = "032f58324b59469d2f5a1a322e18b454ca82cb6b"
+repo-rev = "main"
+repo-url = "https://github.com/jverzani/MTH229Lite.jl"
+uuid = "f77d288f-08b5-411b-868b-e56fbdf518b4"
+version = "1.0.1"
 
 [[deps.MacroTools]]
 deps = ["Markdown", "Random"]
