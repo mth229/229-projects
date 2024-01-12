@@ -35,9 +35,9 @@ uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 
 [[deps.ChainRulesCore]]
 deps = ["Compat", "LinearAlgebra"]
-git-tree-sha1 = "2118cb2765f8197b08e5958cdd17c165427425ee"
+git-tree-sha1 = "c1deebd76f7a443d527fc0430d5758b8b2112ed8"
 uuid = "d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4"
-version = "1.19.0"
+version = "1.19.1"
 weakdeps = ["SparseArrays"]
 
     [deps.ChainRulesCore.extensions]
@@ -90,9 +90,9 @@ version = "0.3.0"
 
 [[deps.Compat]]
 deps = ["TOML", "UUIDs"]
-git-tree-sha1 = "ed2ebb1ff7550226ddb584ba8352facf8d9ffb22"
+git-tree-sha1 = "75bd5b6fc5089df449b5d35fa501c846c9b6549b"
 uuid = "34da2185-b29b-5c13-b0c7-acf172513d20"
-version = "4.11.0"
+version = "4.12.0"
 weakdeps = ["Dates", "LinearAlgebra"]
 
     [deps.Compat.extensions]
@@ -277,11 +277,11 @@ uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
 
 [[deps.MTH229Lite]]
 deps = ["ForwardDiff", "LinearAlgebra", "PlotUtils", "PlotlyLight", "QuadGK", "Reexport", "Roots", "SimpleExpressions", "SpecialFunctions"]
-git-tree-sha1 = "032f58324b59469d2f5a1a322e18b454ca82cb6b"
+git-tree-sha1 = "8c25b55660d0c1cc26164dda79f81d2b3d373683"
 repo-rev = "main"
 repo-url = "https://github.com/jverzani/MTH229Lite.jl"
 uuid = "f77d288f-08b5-411b-868b-e56fbdf518b4"
-version = "1.0.1"
+version = "1.0.2"
 
 [[deps.MacroTools]]
 deps = ["Markdown", "Random"]
@@ -377,9 +377,9 @@ uuid = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 
 [[deps.QuadGK]]
 deps = ["DataStructures", "LinearAlgebra"]
-git-tree-sha1 = "9ebcd48c498668c7fa0e97a9cae873fbee7bfee1"
+git-tree-sha1 = "d2fd909b9579af2931fe709e8261a4feb4659bde"
 uuid = "1fd47b50-473d-5c70-9696-f719f8f3bcdc"
-version = "2.9.1"
+version = "2.9.3"
 
 [[deps.REPL]]
 deps = ["InteractiveUtils", "Markdown", "Sockets", "Unicode"]
