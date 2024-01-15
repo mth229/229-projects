@@ -1,5 +1,4 @@
 [deps]
-Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
 ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
 LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 MTH229Lite = "f77d288f-08b5-411b-868b-e56fbdf518b4"
@@ -10,4 +9,3 @@ Reexport = "189a3867-3050-52da-a836-e630ba90ab69"
 Roots = "f2b01f46-fcfa-551c-844a-d8ac1e96c665"
 SimpleExpressions = "deba94f7-f32a-40ad-b45e-be020a5ded2f"
 SpecialFunctions = "276daf66-3868-5448-9aa4-cd146d93841b"
-Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
