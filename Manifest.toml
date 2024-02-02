@@ -277,7 +277,7 @@ uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
 
 [[deps.MTH229Lite]]
 deps = ["ForwardDiff", "LinearAlgebra", "PlotlyLightLite", "QuadGK", "Reexport", "Roots", "SimpleExpressions", "SpecialFunctions"]
-git-tree-sha1 = "a304aeceaa6a45d2c1e98d762ca2b130563b37ca"
+git-tree-sha1 = "f4249979a71ea798f64922441c3c41153468df8d"
 repo-rev = "main"
 repo-url = "https://github.com/jverzani/MTH229Lite.jl"
 uuid = "f77d288f-08b5-411b-868b-e56fbdf518b4"
@@ -361,7 +361,7 @@ version = "0.7.4"
 
 [[deps.PlotlyLightLite]]
 deps = ["PlotUtils", "PlotlyLight"]
-git-tree-sha1 = "9bf3e4a340dde0bd293ff8e73772c384ce10414a"
+git-tree-sha1 = "5de3d803baa4c13f23c96ae52c20247aa9a98636"
 repo-rev = "main"
 repo-url = "https://github.com/jverzani/PlotlyLightLite.jl"
 uuid = "b323ca16-7103-4e40-9e60-7dc7d60a998a"
