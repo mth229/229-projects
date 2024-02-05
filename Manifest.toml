@@ -361,7 +361,7 @@ version = "0.7.4"
 
 [[deps.PlotlyLightLite]]
 deps = ["PlotUtils", "PlotlyLight"]
-git-tree-sha1 = "5de3d803baa4c13f23c96ae52c20247aa9a98636"
+git-tree-sha1 = "7517a68e14dcb4b1b35e8f363bc47babf7910f98"
 repo-rev = "main"
 repo-url = "https://github.com/jverzani/PlotlyLightLite.jl"
 uuid = "b323ca16-7103-4e40-9e60-7dc7d60a998a"
@@ -410,9 +410,9 @@ version = "1.3.0"
 
 [[deps.Roots]]
 deps = ["Accessors", "ChainRulesCore", "CommonSolve", "Printf"]
-git-tree-sha1 = "39ebae5b76c8cd5629bec21adfca78b437dac1e6"
+git-tree-sha1 = "754acd3031a9f2eaf6632ba4850b1c01fe4460c1"
 uuid = "f2b01f46-fcfa-551c-844a-d8ac1e96c665"
-version = "2.1.1"
+version = "2.1.2"
 
     [deps.Roots.extensions]
     RootsForwardDiffExt = "ForwardDiff"
