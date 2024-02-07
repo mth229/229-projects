@@ -361,7 +361,7 @@ version = "0.7.4"
 
 [[deps.PlotlyLightLite]]
 deps = ["PlotUtils", "PlotlyLight"]
-git-tree-sha1 = "1d4d27b962634f2b20cbdee7a461357789bd33ab"
+git-tree-sha1 = "44a7d0e296622e65a5b292b5c5f8e1b0ed117e41"
 repo-rev = "main"
 repo-url = "https://github.com/jverzani/PlotlyLightLite.jl"
 uuid = "b323ca16-7103-4e40-9e60-7dc7d60a998a"
