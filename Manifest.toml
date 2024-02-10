@@ -2,7 +2,7 @@
 
 julia_version = "1.10.0"
 manifest_format = "2.0"
-project_hash = "d99afb796d939c75f2d7e5609825bf3001f2358c"
+project_hash = "f8591d1604864f5aa4385d5f461730a2624931ed"
 
 [[deps.Accessors]]
 deps = ["CompositionsBase", "ConstructionBase", "Dates", "InverseFunctions", "LinearAlgebra", "MacroTools", "Test"]
@@ -35,9 +35,9 @@ uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 
 [[deps.ChainRulesCore]]
 deps = ["Compat", "LinearAlgebra"]
-git-tree-sha1 = "1287e3872d646eed95198457873249bd9f0caed2"
+git-tree-sha1 = "ad25e7d21ce10e01de973cdc68ad0f850a953c52"
 uuid = "d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4"
-version = "1.20.1"
+version = "1.21.1"
 weakdeps = ["SparseArrays"]
 
     [deps.ChainRulesCore.extensions]
@@ -276,8 +276,8 @@ version = "0.3.26"
 uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
 
 [[deps.MTH229Lite]]
-deps = ["ForwardDiff", "LinearAlgebra", "PlotlyLightLite", "QuadGK", "Reexport", "Roots", "SimpleExpressions", "SpecialFunctions"]
-git-tree-sha1 = "f4249979a71ea798f64922441c3c41153468df8d"
+deps = ["ForwardDiff", "LinearAlgebra", "PlotUtils", "PlotlyLight", "QuadGK", "Reexport", "Roots", "SimpleExpressions", "SpecialFunctions"]
+git-tree-sha1 = "b8dc6e36f60127e37aa888afb9adaffe3bfa9811"
 repo-rev = "main"
 repo-url = "https://github.com/jverzani/MTH229Lite.jl"
 uuid = "f77d288f-08b5-411b-868b-e56fbdf518b4"
@@ -358,14 +358,6 @@ deps = ["Artifacts", "Cobweb", "DefaultApplication", "Downloads", "EasyConfig", 
 git-tree-sha1 = "b842129ce0bc5fc230df8968738681a0db50223b"
 uuid = "ca7969ec-10b3-423e-8d99-40f33abb42bf"
 version = "0.7.4"
-
-[[deps.PlotlyLightLite]]
-deps = ["PlotUtils", "PlotlyLight"]
-git-tree-sha1 = "44a7d0e296622e65a5b292b5c5f8e1b0ed117e41"
-repo-rev = "main"
-repo-url = "https://github.com/jverzani/PlotlyLightLite.jl"
-uuid = "b323ca16-7103-4e40-9e60-7dc7d60a998a"
-version = "0.1.0"
 
 [[deps.PrecompileTools]]
 deps = ["Preferences"]
