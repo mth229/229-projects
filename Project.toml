@@ -1,9 +1,6 @@
 [deps]
-MTH229 = "ebaf19f5-aa55-568f-9bb2-d6722dad893b"
-PlotlyBase = "a03496cd-edff-5a9b-9e67-9cda94a718b5"
-Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
-QuadGK = "1fd47b50-473d-5c70-9696-f719f8f3bcdc"
-Roots = "f2b01f46-fcfa-551c-844a-d8ac1e96c665"
-SimplePlots = "307c2aad-90be-4152-b348-f51955fac6ce"
+ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
+PlotlyLightLite = "b323ca16-7103-4e40-9e60-7dc7d60a998a"
+Polynomials = "f27b6e38-b328-58d1-80ce-0feddd5e7a45"
 SpecialFunctions = "276daf66-3868-5448-9aa4-cd146d93841b"
 SymPy = "24249f21-da20-56a4-8eb1-6a02cf4ae2e6"
