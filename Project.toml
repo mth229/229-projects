@@ -1,6 +1,7 @@
 [deps]
 CommonSolve = "38540f10-b2f7-11e9-35d8-d573e4eb0ff2"
 ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
+ODE = "c030b06c-0b6d-57c2-b091-7029874bd033"
 PlotlyLightLite = "b323ca16-7103-4e40-9e60-7dc7d60a998a"
 Polynomials = "f27b6e38-b328-58d1-80ce-0feddd5e7a45"
 PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
