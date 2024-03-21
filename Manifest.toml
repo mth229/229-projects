@@ -2,7 +2,7 @@
 
 julia_version = "1.10.0"
 manifest_format = "2.0"
-project_hash = "0a3460b3daab9d5d3bc7563653b280b6553c4b00"
+project_hash = "4b6439432f25b7ea231d9a13f54ab9a34b556c9c"
 
 [[deps.ADTypes]]
 git-tree-sha1 = "016833eb52ba2d6bea9fcb50ca295980e728ee24"
@@ -77,6 +77,14 @@ uuid = "56f22d72-fd6d-98f1-02f0-08ddc0907c33"
 
 [[deps.Base64]]
 uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
+
+[[deps.BinderPlots]]
+deps = ["PlotUtils", "PlotlyLight"]
+git-tree-sha1 = "81d35dbda864750e40ee1d0ecc59110c702360c0"
+repo-rev = "main"
+repo-url = "https://github.com/jverzani/BinderPlots.jl"
+uuid = "5e41213d-62ae-4ae0-a5b0-867e743d03c0"
+version = "1.0.1"
 
 [[deps.BitTwiddlingConvenienceFunctions]]
 deps = ["Static"]
@@ -232,6 +240,12 @@ git-tree-sha1 = "c0dfa5a35710a193d83f03124356eef3386688fc"
 uuid = "3f0dd361-4fe0-5fc6-8523-80b14ec94d85"
 version = "1.1.0"
 
+[[deps.Dictionaries]]
+deps = ["Indexing", "Random", "Serialization"]
+git-tree-sha1 = "573c92ef22ee0783bfaa4007c732b044c791bc6d"
+uuid = "85a47980-9c8c-11e8-2b9f-f7ca1fa99fb4"
+version = "0.4.1"
+
 [[deps.DiffEqBase]]
 deps = ["ArrayInterface", "DataStructures", "DocStringExtensions", "EnumX", "EnzymeCore", "FastBroadcast", "ForwardDiff", "FunctionWrappers", "FunctionWrappersWrappers", "LinearAlgebra", "Logging", "Markdown", "MuladdMacro", "Parameters", "PreallocationTools", "PrecompileTools", "Printf", "RecursiveArrayTools", "Reexport", "SciMLBase", "SciMLOperators", "Setfield", "SparseArrays", "Static", "StaticArraysCore", "Statistics", "Tricks", "TruncatedStacktraces"]
 git-tree-sha1 = "b19b2bb1ecd1271334e4b25d605e50f75e68fcae"
@@ -371,6 +385,11 @@ version = "0.1.6"
 git-tree-sha1 = "debdd00ffef04665ccbb3e150747a77560e8fad1"
 uuid = "615f187c-cbe4-4ef1-ba3b-2fcf58d6d173"
 version = "0.1.1"
+
+[[deps.Indexing]]
+git-tree-sha1 = "ce1566720fd6b19ff3411404d4b977acd4814f9f"
+uuid = "313cdc1a-70c2-5d6a-ae34-0150d3930a38"
+version = "1.1.1"
 
 [[deps.InteractiveUtils]]
 deps = ["Markdown"]
@@ -593,14 +612,6 @@ git-tree-sha1 = "62c97c14bedc0797ef730ffb2177e869c7dec621"
 uuid = "ca7969ec-10b3-423e-8d99-40f33abb42bf"
 version = "0.8.2"
 
-[[deps.PlotlyLightLite]]
-deps = ["PlotUtils", "PlotlyLight"]
-git-tree-sha1 = "0fc319183d1dc45a08c0fe7b00957a749a1c4d50"
-repo-rev = "main"
-repo-url = "https://github.com/jverzani/PlotlyLightLite.jl"
-uuid = "b323ca16-7103-4e40-9e60-7dc7d60a998a"
-version = "0.1.5"
-
 [[deps.Polyester]]
 deps = ["ArrayInterface", "BitTwiddlingConvenienceFunctions", "CPUSummary", "IfElse", "ManualMemory", "PolyesterWeave", "Requires", "Static", "StaticArrayInterface", "StrideArraysCore", "ThreadingUtilities"]
 git-tree-sha1 = "8df43bbe60029526dd628af7e9951f5af680d4d7"
@@ -819,6 +830,12 @@ weakdeps = ["ChainRulesCore"]
 
     [deps.SpecialFunctions.extensions]
     SpecialFunctionsChainRulesCoreExt = "ChainRulesCore"
+
+[[deps.SplitApplyCombine]]
+deps = ["Dictionaries", "Indexing"]
+git-tree-sha1 = "c06d695d51cfb2187e6848e98d6252df9101c588"
+uuid = "03a91e81-4c3e-53e1-a0a4-9c0c8f19dd66"
+version = "1.2.3"
 
 [[deps.Static]]
 deps = ["IfElse"]
