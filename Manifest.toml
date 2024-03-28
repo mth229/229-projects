@@ -194,9 +194,9 @@ uuid = "53c48c17-4a7d-5ca2-90c5-79b7896eea93"
 version = "0.8.4"
 
 [[deps.Format]]
-git-tree-sha1 = "f3cf88025f6d03c194d73f5d13fee9004a108329"
+git-tree-sha1 = "9c68794ef81b08086aeb32eeaf33531668d5f5fc"
 uuid = "1fa38f19-a742-5d3f-a2b9-30dd87b9d5f8"
-version = "1.3.6"
+version = "1.3.7"
 
 [[deps.ForwardDiff]]
 deps = ["CommonSubexpressions", "DiffResults", "DiffRules", "LinearAlgebra", "LogExpFunctions", "NaNMath", "Preferences", "Printf", "Random", "SpecialFunctions"]
@@ -324,7 +324,7 @@ uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
 
 [[deps.MTH229Lite]]
 deps = ["ForwardDiff", "LinearAlgebra", "PlotUtils", "PlotlyLight", "QuadGK", "Reexport", "Roots", "SimpleExpressions", "SpecialFunctions"]
-git-tree-sha1 = "749af60fa2b55b3f4ad61224df02d71ce174f97f"
+git-tree-sha1 = "f0ad37d5440885a9c4c78a092f94ea4bdfb6c3d5"
 repo-rev = "main"
 repo-url = "https://github.com/jverzani/MTH229Lite.jl"
 uuid = "f77d288f-08b5-411b-868b-e56fbdf518b4"
