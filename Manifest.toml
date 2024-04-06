@@ -59,9 +59,9 @@ version = "3.24.0"
 
 [[deps.ColorTypes]]
 deps = ["FixedPointNumbers", "Random"]
-git-tree-sha1 = "eb7f0f8307f71fac7c606984ea5fb2817275d6e4"
+git-tree-sha1 = "b10d0b65641d57b8b4d5e234446582de5047050d"
 uuid = "3da002f7-5984-5a60-b8a6-cbb66c0b333f"
-version = "0.11.4"
+version = "0.11.5"
 
 [[deps.ColorVectorSpace]]
 deps = ["ColorTypes", "FixedPointNumbers", "LinearAlgebra", "Requires", "Statistics", "TensorCore"]
@@ -324,11 +324,11 @@ uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
 
 [[deps.MTH229Lite]]
 deps = ["ForwardDiff", "LinearAlgebra", "PlotUtils", "PlotlyLight", "QuadGK", "Reexport", "Roots", "SimpleExpressions", "SpecialFunctions"]
-git-tree-sha1 = "973c7d26ccba8f46feae96148c49a3569a05fac1"
+git-tree-sha1 = "6504285bb7afcea14ed97e63dd02d4317b30b6dd"
 repo-rev = "main"
 repo-url = "https://github.com/jverzani/MTH229Lite.jl"
 uuid = "f77d288f-08b5-411b-868b-e56fbdf518b4"
-version = "1.0.6"
+version = "1.0.7"
 
 [[deps.MacroTools]]
 deps = ["Markdown", "Random"]
