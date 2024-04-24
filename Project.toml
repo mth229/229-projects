@@ -1,4 +1,5 @@
 [deps]
+BinderPlots = "5e41213d-62ae-4ae0-a5b0-867e743d03c0"
 ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
 LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 MTH229 = "ebaf19f5-aa55-568f-9bb2-d6722dad893b"
