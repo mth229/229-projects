@@ -1,0 +1,122 @@
+---
+engine: julia
+---
+# Maximization and minimization with Julia
+
+
+
+To get started, we load our `MTH229` package for plotting and other features:
+
+
+```{julia}
+#| eval: false
+using MTH229
+using Plots
+plotly()
+```
+
+```{julia}
+#| include: false
+using MTH229
+using Plots
+gr();
+```
+
+
+### Quick background
+
+Read about this material here: [Maximization and minimization with julia](http://mth229.github.io/extrema.html).
+
+*Extrema* is nothing more than a fancy word for
+describing either a maximum *or* a minimum. In calculus, we have **two**
+concepts of these: *relative* extrema and *absolute* extrema. Let's
+focus for a second on *absolute* extrema which are defined through:
+
+> A value $y=f(x)$ is an *absolute maximum* over an interval
+> $[a,b]$ if $y \geq f(x)$ for all $x$ in $[a,b]$. (An absolute minimum has $y \leq f(x)$ instead.)
+
+Of special note is that an absolute extrema involves *both* a function **and** an interval.
+
+
+There are two theorems which help identify extrema here. The first,
+due to Bolzano, says that any continuous function on a *closed*
+interval will *necessarily* have an absolute maximum and minimum on that
+interval. The second, due to Fermat, tells us where to look: these
+absolute maximums and minimums can only occur at end points or
+critical points.
+
+Bolzano and Fermat are historic figures. For us, we can plot a
+function to visually identify extrema. The value of Bolzano is the
+knowledge that yes, plotting isn't a waste of time, as we are
+*guaranteed* to see what we look for. The value of Fermat is that if
+we want to get *precise* numeric answers, we have a means: identify
+the end points and the critical points then compare  the function at *just* these values.
+
+----
+
+## An example
+
+Among all rectangles
+with perimeter $25$ find the one with maximum area.
+
+This problem leads to two equations:
+
+* a constraint based on a fixed perimeter: $25 = 2b + 2h$.
+* an expression for the area: $A=h \cdot b$.
+
+We translate these into `Julia` functions. First, using the
+constraint, we solve for one variable and then substitute this in:
+
+```{julia}
+h(b) = (25 - 2b) / 2
+A(b) = h(b) * b    # A = h * b translates to this
+```
+
+So we have area as a function of a single variable. Here `b` ranges
+from $0$ to no more than $12.5$, as both `b` and `h` need be
+non-negative. A plot shows the function to maximize:
+
+```{julia}
+plot(A, 0, 12.5)
+```
+
+Not only do we see a maximum value, we also can tell more:
+
+* the maximum happens at a critical point - not an end point
+* there is a unique critical point on this interval $[0,12.5]$.
+
+So, we can use `fzero` to find the critical point. The graph shows it is near $6$:
+
+
+```{julia}
+x = fzero(A', 6)
+```
+
+We store the value as `x`. Is this the answer? Not quite, the question
+asks for the rectangle that gives the maximum area, so we should also
+find the height. But this is just
+
+```{julia}
+h(x)
+```
+
+In fact, for the problems encountered within, the critical point, the
+constraint at the critical point, or the function evaluated at the
+critical point are used to answer the questions:
+
+```{julia}
+x, h(x), A(x)
+```
+
+Play this video to see this problem again and a related problem:
+
+[![asciicast](https://asciinema.org/a/4tdlumFtE2mBswLZJSw6q9K9J.svg)](https://asciinema.org/a/4tdlumFtE2mBswLZJSw6q9K9J)
+
+(This uses the Julia REPL, not a notebook.)
+
+----
+
+```{julia}
+# Your commands go here
+
+```
