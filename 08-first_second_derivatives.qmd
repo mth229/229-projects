@@ -1,0 +1,154 @@
+---
+engine: julia
+---
+# Exploring first and second derivatives with Julia
+
+
+To get started, we load the `MTH229` package:
+
+
+```{julia}
+#| eval: false
+using MTH229
+using Plots
+plotly()
+```
+
+```{julia}
+#| include: false
+using MTH229
+using Plots
+gr();
+```
+
+Recall, when `MTH229` is loaded, the same prime
+notation of mathematics is available in `Julia` for indicating
+derivatives of functions (through `ForwardDiff`).
+
+
+
+## Quick background
+
+Read about this material here: [Exploring first and second derivatives with Julia](http://mth229.github.io/first-second-derivatives.html).
+
+
+This assignment looks at the relationship between a
+function, $f(x)$, and its first and second derivatives: $f'(x)$ and
+$f''(x)$. The basic relationship can be summarized (though the devil
+is in the details) by:
+
+* If the first derivative is *positive* on $(a,b)$ then the function
+  is *increasing* on $(a,b)$.
+
+* If the second derivative is *positive* on $(a,b)$ then the function
+  is *concave up* on $(a,b)$.
+
+(The "devil" here is that the converse statements are usually - but not always - true.)
+
+
+Some key  definitions are:
+
+* A **critical** point of $f$ is a value in the domain of $f(x)$ for which the derivative is $0$ or undefined. These are often---but **not always**---where $f(x)$ has a local maximum or minimum.
+
+* An **inflection point** of $f$ is a value in the domain of $f(x)$ where the concavity of $f$ *changes*. (These are *often*---but **not always**---where $f''(x)=0$.)
+
+
+These two relationships and definitions are put to use to characterize
+*local extrema* of a function via one of two "derivative" tests:
+
+
+* The **first derivative test**:  This states that  if $c$ is a critical point of $f(x)$ then if $f'(x)$ changes sign from $+$ to $-$ at $c$ then $f(c)$ is a local maximum and if $f'(x)$ changes sign from $-$ to $+$ then $f(c)$ is a local minimum. If there is no sign change, then $f(c)$ is neither a local minimum or maximum.
+
+* The **second derivative test**: This states that if $c$ is a critical point of $f(x)$ and $f''(c) > 0$ then $f(c)$ is a local minimum and if $f''(c) < 0$ then $f(c)$ is a local maximum. The test says nothing about the case $f''(c) = 0$.
+
+----
+
+We investigate these concepts in `Julia` both graphically and numerically.
+
+For the graphical exploration, the `plotif` function from the `MTH229` package is quite useful.
+
+It is used to plot a function `f` using two colors; the color choice depending on whether the second function, `g` is non-negative or not. (Basically it does `plot(f, a, b); plot!(x -> g(x) >= 0.0 ? f(x) : NaN, a, b)`.)
+
+
+This function can be used to graphically illustrate where the graph of `f` is *positive*, *increasing*, or *concave up*:
+`plotif(f, f, a, b)` will show a different color when $f(x)$ is
+*positive*, `plotif(f, f', a, b)` will show a different color when
+$f(x)$ is *increasing*, and  `plotif(f, f'', a, b)` will show a different color when
+$f(x)$ is *concave up*. For example, here we see where the following `f` is increasing:
+
+```{julia}
+f(x) = 1 + cos(x) + cos(2x)
+plotif(f, f', 0, 2pi)  # color increasing
+plot!(zero)
+```
+
+### `fzeros`
+
+Once eyes are trained to identify zeros, critical points, or
+inflection points of a function, we can use numeric methods to zoom in
+on more accurate values.
+
+Recall, `fzero(f, a, b)` will find a zero of
+`f` **if** `[a,b]` is a *bracketing* interval (`f` takes different signs
+at the endpoints); and `fzero(f, c)` will try to find a zero *near* `c`.
+
+These two methods are incorporated into the convenience function `fzeros(f, a, b)` which *attempts* to identify all zeros within `[a, b]`.
+
+It is called like `plot` with a function and two values indicating the interval to scan:
+
+```{julia}
+zs = fzeros(f, 0, 2pi)
+```
+
+The `fzeros` function returns a container of values, which may, of course,
+be empty. Above we assigned the name `zs` to these values.
+
+There are times when applying a function to the returned values is desired. The "dot" makes this easy. Here we apply `f` to the values in `zs` and expect to see values near `0`:
+
+```{julia}
+f.(zs)
+```
+
+----
+
+If our task was to get *all* critical points of `f` in the interval
+$(0, 2\pi)$, then `fzeros` is an easy-to-use choice: As `f` is
+continuously differentiable, all critical points are given by solving
+$f'(x)=0$:
+
+```{julia}
+fzeros(f', 0, 2pi)
+```
+
+### `sign_chart`
+
+These same values are also identified by `sign_chart` (which uses `fzeros` behind the scenes) and indicates whether the function changes sign at the identified zeros (or undefined values):
+
+```{julia}
+sign_chart(f', 0, 2pi)
+```
+
+This output shows, for example, that $f'(x)$ is positive on $(1.82\dots, 3.14\dots)$ and again on $(4.45\dots, 6.28\dots)$. This could be used to conclude where $f(x)$ is *increasing*.
+
+----
+
+If our task is to get all *inflection* points of `f` in the interval, then the `sign_chart` function is helpful, as inflection points are points in the domain where the concavity changes:
+
+```{julia}
+sign_chart(f'', 0, 2pi)
+```
+
+As the sign changes at each of the identified values, all `4` are inflection points.
+
+### Careful
+
+The convenient `fzeros` and `sign_chart` functions are only *pretty* good at finding all the zeros over the interval. For some functions -- especially those cooked up by clever math professors -- the choice of interval can lead to `fzeros` finding fewer than is mathematically possible. The functions should be used in combination with a plot and with as narrow an interval specified, as reasonable.
+
+
+
+----
+
+```{julia}
+# Your commands go here
+
+```
