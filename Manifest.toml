@@ -49,9 +49,9 @@ weakdeps = ["CalculusWithJulia"]
 
 [[deps.CalculusWithJulia]]
 deps = ["Base64", "Contour", "ForwardDiff", "IntervalSets", "LinearAlgebra", "PlotUtils", "Random", "Reexport", "Roots", "SpecialFunctions", "SplitApplyCombine", "Test"]
-git-tree-sha1 = "1567621a32b54329a4b09ba931a9f38d29ee7256"
+git-tree-sha1 = "16af1583d14f9eb588936cc963ef98b51051fdc8"
 uuid = "a2e0e22d-7d4c-5312-9169-8b992201a882"
-version = "0.2.2"
+version = "0.2.3"
 
     [deps.CalculusWithJulia.extensions]
     CalculusWithJuliaPlotsExt = "Plots"
