@@ -1,0 +1,19 @@
+# Blank notebook
+
+This is a blank notebook.
+
+It is useful for test taking or as a scratch pad.
+
+New cells will appear at the bottom when the last cell is run.
+
+```{julia}
+#| eval: false
+using MTH229
+using Plots
+plotly()
+```
+
+```{julia}
+# Enter your commands here
+
+```
