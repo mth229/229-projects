@@ -37,11 +37,11 @@ uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 
 [[deps.BinderPlots]]
 deps = ["PlotUtils", "PlotlyLight"]
-git-tree-sha1 = "b5620a888af61de419aa9baa3fea7420ea493ee6"
+git-tree-sha1 = "1eebdac4c4a1889f72cc71e2b3a2a887dc8a1c09"
 repo-rev = "main"
 repo-url = "https://github.com/jverzani/BinderPlots.jl"
 uuid = "5e41213d-62ae-4ae0-a5b0-867e743d03c0"
-version = "1.0.7"
+version = "1.0.8"
 weakdeps = ["CalculusWithJulia", "SimpleExpressions"]
 
     [deps.BinderPlots.extensions]
@@ -608,9 +608,9 @@ version = "2.0.1"
 
 [[deps.SymPyCore]]
 deps = ["CommonEq", "CommonSolve", "Latexify", "LinearAlgebra", "Markdown", "RecipesBase", "SpecialFunctions"]
-git-tree-sha1 = "075700e623e8dac9ba7f94d9e6d6e424f2000f46"
+git-tree-sha1 = "d2e8b52c18ad76cc8827eb134b9ba4bb7699ec59"
 uuid = "458b697b-88f0-4a86-b56b-78b75cfb3531"
-version = "0.1.17"
+version = "0.1.18"
 
     [deps.SymPyCore.extensions]
     SymPyCoreSymbolicUtilsExt = "SymbolicUtils"
