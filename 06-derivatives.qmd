@@ -142,8 +142,8 @@ plot!(tl)
 Suppose the intersection point between the secant and tangent lines between $0$ and $0.5$ is to be identified. This can be done with:
 
 ```{julia}
-u(x) = tl(x) - sl(x)
-fzero(u, 0, 0.5)
+eqn(x) = tl(x) - sl(x)
+fzero(eqn, 0, 0.5)
 ```
 
 
