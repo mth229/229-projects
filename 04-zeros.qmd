@@ -133,14 +133,14 @@ fzero(f, 1, 2)			# finds sqrt(2)
 ```
 ### Solving $f(x) = c$
 
-Suppose the job is to identify when the function $f(x) = e^x / (1 + e^x)$ is equal to $3/4$. That is solving $f(x) = 3/4$. Our tool solves $f(x) = 0$. To use it, we define $u(x) = f(x) - 3/4$. Then $u(x)$ is zero when $f(x)$ is $3/4$.
+Suppose the job is to identify when the function $f(x) = e^x / (1 + e^x)$ is equal to $3/4$. That is solving $f(x) = 3/4$. Our tool solves $f(x) = 0$. To use it, we define $eqn(x) = f(x) - 3/4$. Then $eqn(x)$ is zero when $f(x)$ is $3/4$.
 
-The function $f(x)$ is *increasing* so we can be very lazy with finding a bracketing interval, as $u(0)$ will be negative and $u(100)$ very close to $1$ and by monotonicity there can only be one zero, we have:
+The function $f(x)$ is *increasing* so we can be very lazy with finding a bracketing interval, as $eqn(0)$ will be negative and $eqn(100)$ very close to $1$ and by monotonicity there can only be one zero, we have:
 
 ```{julia}
 f(x) = exp(x) / (1 + exp(x))
-u(x) = f(x) - 3/4
-fzero(u, 0, 100)
+eqn(x) = f(x) - 3/4
+fzero(eqn, 0, 100)
 ```
 
 ### Solving for $f(x) = g(x)$.
@@ -148,7 +148,7 @@ fzero(u, 0, 100)
 Many problems are more naturally expressed by solving $f(x) = g(x)$,
 and not $f(x) = 0$, as expected by `fzero`. This is no issue, as it
 only requires the extra step of defining a function of the differences
-$u(x) = f(x) - g(x)$, as $u(x) = 0$ implies $f(x) = g(x)$.
+$eqn(x) = f(x) - g(x)$, as $u(x) = 0$ implies $f(x) = g(x)$.
 
 For example, find the intersection point of $4 - e^{x/10} = e^{x/15}$.
 
@@ -168,16 +168,16 @@ plot!(g, 0, 20)
 Or we could plot the difference:
 
 ```{julia}
-u(x) = f(x) - g(x)
-plot(u, 0, 20)
+eqn(x) = f(x) - g(x)
+plot(eqn, 0, 20)
 plot!(zero, 0, 20)
 ```
 
 From *either* graph, we see quickly that the interval $[5,10]$ will be
-a bracketing interval for $u$. We can numerically zoom in on the the intersection point with:
+a bracketing interval for $\text{eqn}(x)$. We can numerically zoom in on the the intersection point with:
 
 ```{julia}
-fzero(u, 5, 10)
+fzero(eqn, 5, 10)
 ```
 
 
