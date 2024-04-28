@@ -378,9 +378,9 @@ uuid = "56ddb016-857b-54e1-b83d-db4d58db5568"
 
 [[deps.MTH229]]
 deps = ["CalculusWithJulia", "QuadGK", "Reexport", "SimpleExpressions", "SymPy"]
-git-tree-sha1 = "ea1dfb354e5374f30cd4efea2be6261917bf1d11"
+git-tree-sha1 = "3751f4f7bc153608933ecdf1f0dc9b37c57106c0"
 uuid = "ebaf19f5-aa55-568f-9bb2-d6722dad893b"
-version = "0.3.1"
+version = "0.3.2"
 
 [[deps.MacroTools]]
 deps = ["Markdown", "Random"]
@@ -543,15 +543,19 @@ version = "1.2.1"
 uuid = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
 
 [[deps.SimpleExpressions]]
-git-tree-sha1 = "78a1e40a5c02be51afed3b093b877fb67bb54547"
+git-tree-sha1 = "6c00a48f1739e079ed7e2c3a29d209ee13536512"
 uuid = "deba94f7-f32a-40ad-b45e-be020a5ded2f"
-version = "1.0.17"
+version = "1.0.18"
 
     [deps.SimpleExpressions.extensions]
+    SimpleExpressionsRecipesBaseExt = "RecipesBase"
+    SimpleExpressionsRootsExt = "Roots"
     SimpleExpressionsSpecialFunctionsExt = "SpecialFunctions"
     SimpleExpressionsTermInterfaceExt = "TermInterface"
 
     [deps.SimpleExpressions.weakdeps]
+    RecipesBase = "3cdcf5f2-1ef4-517c-9805-6587b60abb01"
+    Roots = "f2b01f46-fcfa-551c-844a-d8ac1e96c665"
     SpecialFunctions = "276daf66-3868-5448-9aa4-cd146d93841b"
     TermInterface = "8ea1fca8-c5ef-4a55-8b96-4e9afe9c9a3c"
 
