@@ -37,7 +37,7 @@ uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 
 [[deps.BinderPlots]]
 deps = ["PlotUtils", "PlotlyLight"]
-git-tree-sha1 = "31387da02b5ea142bcc3a1afd94e2634e0d9a1dc"
+git-tree-sha1 = "49cc93c6e9534f64a12cc4c1fbc62e6795ed64bb"
 repo-rev = "main"
 repo-url = "https://github.com/jverzani/BinderPlots.jl"
 uuid = "5e41213d-62ae-4ae0-a5b0-867e743d03c0"
@@ -569,9 +569,9 @@ version = "1.10.0"
 
 [[deps.SpecialFunctions]]
 deps = ["IrrationalConstants", "LogExpFunctions", "OpenLibm_jll", "OpenSpecFun_jll"]
-git-tree-sha1 = "e2cfc4012a19088254b3950b85c3c1d8882d864d"
+git-tree-sha1 = "2f5d4697f21388cbe1ff299430dd169ef97d7e14"
 uuid = "276daf66-3868-5448-9aa4-cd146d93841b"
-version = "2.3.1"
+version = "2.4.0"
 weakdeps = ["ChainRulesCore"]
 
     [deps.SpecialFunctions.extensions]
