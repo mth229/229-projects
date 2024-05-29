@@ -37,7 +37,7 @@ uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 
 [[deps.BinderPlots]]
 deps = ["PlotUtils", "PlotlyLight"]
-git-tree-sha1 = "49cc93c6e9534f64a12cc4c1fbc62e6795ed64bb"
+git-tree-sha1 = "9141f4ee9d9c9db71c4bd634f88e4a9d67327b3c"
 repo-rev = "main"
 repo-url = "https://github.com/jverzani/BinderPlots.jl"
 uuid = "5e41213d-62ae-4ae0-a5b0-867e743d03c0"
@@ -50,9 +50,9 @@ weakdeps = ["CalculusWithJulia", "SimpleExpressions"]
 
 [[deps.CalculusWithJulia]]
 deps = ["Base64", "Contour", "ForwardDiff", "IntervalSets", "LinearAlgebra", "PlotUtils", "Random", "Reexport", "Roots", "SpecialFunctions", "SplitApplyCombine", "Test"]
-git-tree-sha1 = "16af1583d14f9eb588936cc963ef98b51051fdc8"
+git-tree-sha1 = "217c1decd0cfb958a1827dd532f97042c83daa44"
 uuid = "a2e0e22d-7d4c-5312-9169-8b992201a882"
-version = "0.2.3"
+version = "0.2.6"
 
     [deps.CalculusWithJulia.extensions]
     CalculusWithJuliaPlotsExt = "Plots"
@@ -80,9 +80,9 @@ version = "0.6.1"
 
 [[deps.ColorSchemes]]
 deps = ["ColorTypes", "ColorVectorSpace", "Colors", "FixedPointNumbers", "PrecompileTools", "Random"]
-git-tree-sha1 = "67c1f244b991cad9b0aa4b7540fb758c2488b129"
+git-tree-sha1 = "4b270d6465eb21ae89b732182c20dc165f8bf9f2"
 uuid = "35d6a980-a343-548e-a6ea-1d62b119f2f4"
-version = "3.24.0"
+version = "3.25.0"
 
 [[deps.ColorTypes]]
 deps = ["FixedPointNumbers", "Random"]
@@ -102,9 +102,9 @@ weakdeps = ["SpecialFunctions"]
 
 [[deps.Colors]]
 deps = ["ColorTypes", "FixedPointNumbers", "Reexport"]
-git-tree-sha1 = "fc08e5930ee9a4e03f84bfb5211cb54e7769758a"
+git-tree-sha1 = "362a287c3aa50601b0bc359053d5c2468f0e7ce0"
 uuid = "5ae59095-9a9b-59fe-a467-6f913c188581"
-version = "0.12.10"
+version = "0.12.11"
 
 [[deps.CommonEq]]
 git-tree-sha1 = "6b0f0354b8eb954cdba708fb262ef00ee7274468"
@@ -227,9 +227,9 @@ uuid = "7b1f6079-737a-58dc-b8bc-7a2ca5c1b5ee"
 
 [[deps.FixedPointNumbers]]
 deps = ["Statistics"]
-git-tree-sha1 = "335bfdceacc84c5cdf16aadc768aa5ddfc5383cc"
+git-tree-sha1 = "05882d6995ae5c12bb5f36dd2ed3f61c98cbb172"
 uuid = "53c48c17-4a7d-5ca2-90c5-79b7896eea93"
-version = "0.8.4"
+version = "0.8.5"
 
 [[deps.Format]]
 git-tree-sha1 = "9c68794ef81b08086aeb32eeaf33531668d5f5fc"
@@ -454,9 +454,9 @@ version = "1.4.1"
 
 [[deps.PlotlyLight]]
 deps = ["Artifacts", "Cobweb", "Downloads", "EasyConfig", "JSON3", "REPL", "Random", "StructTypes"]
-git-tree-sha1 = "62c97c14bedc0797ef730ffb2177e869c7dec621"
+git-tree-sha1 = "5684d34d28ca87ef546a6cb9646d53c13f93a8ea"
 uuid = "ca7969ec-10b3-423e-8d99-40f33abb42bf"
-version = "0.8.2"
+version = "0.9.1"
 
 [[deps.PrecompileTools]]
 deps = ["Preferences"]
@@ -543,17 +543,19 @@ version = "1.2.1"
 uuid = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
 
 [[deps.SimpleExpressions]]
-git-tree-sha1 = "6c00a48f1739e079ed7e2c3a29d209ee13536512"
+git-tree-sha1 = "bcef9af30e13a230dde0f2973ad96259f284855e"
 uuid = "deba94f7-f32a-40ad-b45e-be020a5ded2f"
-version = "1.0.18"
+version = "1.0.20"
 
     [deps.SimpleExpressions.extensions]
+    SimpleExpressionsAbstractTreesExt = "AbstractTrees"
     SimpleExpressionsRecipesBaseExt = "RecipesBase"
     SimpleExpressionsRootsExt = "Roots"
     SimpleExpressionsSpecialFunctionsExt = "SpecialFunctions"
     SimpleExpressionsTermInterfaceExt = "TermInterface"
 
     [deps.SimpleExpressions.weakdeps]
+    AbstractTrees = "1520ce14-60c1-5f80-bbc7-55ef81b5835c"
     RecipesBase = "3cdcf5f2-1ef4-517c-9805-6587b60abb01"
     Roots = "f2b01f46-fcfa-551c-844a-d8ac1e96c665"
     SpecialFunctions = "276daf66-3868-5448-9aa4-cd146d93841b"
@@ -606,15 +608,15 @@ version = "7.2.1+1"
 
 [[deps.SymPy]]
 deps = ["CommonEq", "CommonSolve", "LinearAlgebra", "PyCall", "SpecialFunctions", "SymPyCore"]
-git-tree-sha1 = "8d727c118eb31ffad73cce569b7bb29eef5fb9ad"
+git-tree-sha1 = "b8ce3d36b736a21939ba999f8d4dfc1012b2c3a3"
 uuid = "24249f21-da20-56a4-8eb1-6a02cf4ae2e6"
-version = "2.0.1"
+version = "2.1.0"
 
 [[deps.SymPyCore]]
 deps = ["CommonEq", "CommonSolve", "Latexify", "LinearAlgebra", "Markdown", "RecipesBase", "SpecialFunctions"]
-git-tree-sha1 = "d2e8b52c18ad76cc8827eb134b9ba4bb7699ec59"
+git-tree-sha1 = "c34a5998aaabcda93debb8b58a9781521a043ae4"
 uuid = "458b697b-88f0-4a86-b56b-78b75cfb3531"
-version = "0.1.18"
+version = "0.2.2"
 
     [deps.SymPyCore.extensions]
     SymPyCoreSymbolicUtilsExt = "SymbolicUtils"
