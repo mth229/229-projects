@@ -37,16 +37,17 @@ uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 
 [[deps.BinderPlots]]
 deps = ["PlotUtils", "PlotlyLight"]
-git-tree-sha1 = "9141f4ee9d9c9db71c4bd634f88e4a9d67327b3c"
+git-tree-sha1 = "e3f87b0041c2a1520611c82a04d0560067832212"
 repo-rev = "main"
 repo-url = "https://github.com/jverzani/BinderPlots.jl"
 uuid = "5e41213d-62ae-4ae0-a5b0-867e743d03c0"
 version = "1.0.9"
-weakdeps = ["CalculusWithJulia", "SimpleExpressions"]
+weakdeps = ["CalculusWithJulia", "SimpleExpressions", "SymPyCore"]
 
     [deps.BinderPlots.extensions]
     BinderPlotsCalculusWithJuliaExt = "CalculusWithJulia"
     BinderPlotsSimpleExpressionsExt = "SimpleExpressions"
+    BinderPlotsSymPyCoreExt = "SymPyCore"
 
 [[deps.CalculusWithJulia]]
 deps = ["Base64", "Contour", "ForwardDiff", "IntervalSets", "LinearAlgebra", "PlotUtils", "Random", "Reexport", "Roots", "SpecialFunctions", "SplitApplyCombine", "Test"]
