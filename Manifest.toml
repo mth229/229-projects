@@ -36,12 +36,12 @@ uuid = "56f22d72-fd6d-98f1-02f0-08ddc0907c33"
 uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
 
 [[deps.BinderPlots]]
-deps = ["PlotUtils", "PlotlyLight"]
-git-tree-sha1 = "e3f87b0041c2a1520611c82a04d0560067832212"
+deps = ["PlotUtils", "PlotlyLight", "SplitApplyCombine"]
+git-tree-sha1 = "dd196030833dad92296164c23e2bced6cd39780a"
 repo-rev = "main"
 repo-url = "https://github.com/jverzani/BinderPlots.jl"
 uuid = "5e41213d-62ae-4ae0-a5b0-867e743d03c0"
-version = "1.0.9"
+version = "1.0.12"
 weakdeps = ["CalculusWithJulia", "SimpleExpressions", "SymPyCore"]
 
     [deps.BinderPlots.extensions]
@@ -65,9 +65,9 @@ version = "0.2.6"
 
 [[deps.ChainRulesCore]]
 deps = ["Compat", "LinearAlgebra"]
-git-tree-sha1 = "575cd02e080939a33b6df6c5853d14924c08e35b"
+git-tree-sha1 = "71acdbf594aab5bbb2cec89b208c41b4c411e49f"
 uuid = "d360d2e6-b24c-11e9-a2a3-2a2ae2dbcce4"
-version = "1.23.0"
+version = "1.24.0"
 weakdeps = ["SparseArrays"]
 
     [deps.ChainRulesCore.extensions]
@@ -360,9 +360,9 @@ uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 
 [[deps.LogExpFunctions]]
 deps = ["DocStringExtensions", "IrrationalConstants", "LinearAlgebra"]
-git-tree-sha1 = "18144f3e9cbe9b15b070288eef858f71b291ce37"
+git-tree-sha1 = "a2d09619db4e765091ee5c6ffe8872849de0feea"
 uuid = "2ab3a3ac-af41-5b50-aa03-7779005ae688"
-version = "0.3.27"
+version = "0.3.28"
 
     [deps.LogExpFunctions.extensions]
     LogExpFunctionsChainRulesCoreExt = "ChainRulesCore"
@@ -587,9 +587,9 @@ uuid = "03a91e81-4c3e-53e1-a0a4-9c0c8f19dd66"
 version = "1.2.3"
 
 [[deps.StaticArraysCore]]
-git-tree-sha1 = "36b3d696ce6366023a0ea192b4cd442268995a0d"
+git-tree-sha1 = "192954ef1208c7019899fbf8049e717f92959682"
 uuid = "1e83bf80-4336-4d27-bf5d-d5a4f845583c"
-version = "1.4.2"
+version = "1.4.3"
 
 [[deps.Statistics]]
 deps = ["LinearAlgebra", "SparseArrays"]
@@ -609,15 +609,15 @@ version = "7.2.1+1"
 
 [[deps.SymPy]]
 deps = ["CommonEq", "CommonSolve", "LinearAlgebra", "PyCall", "SpecialFunctions", "SymPyCore"]
-git-tree-sha1 = "b8ce3d36b736a21939ba999f8d4dfc1012b2c3a3"
+git-tree-sha1 = "36a25ab577e780f1b0861b326e90e362095e4494"
 uuid = "24249f21-da20-56a4-8eb1-6a02cf4ae2e6"
-version = "2.1.0"
+version = "2.1.1"
 
 [[deps.SymPyCore]]
 deps = ["CommonEq", "CommonSolve", "Latexify", "LinearAlgebra", "Markdown", "RecipesBase", "SpecialFunctions"]
-git-tree-sha1 = "c34a5998aaabcda93debb8b58a9781521a043ae4"
+git-tree-sha1 = "c8ff4f91ffa394aea95980fff2853d245307eb80"
 uuid = "458b697b-88f0-4a86-b56b-78b75cfb3531"
-version = "0.2.2"
+version = "0.2.3"
 
     [deps.SymPyCore.extensions]
     SymPyCoreSymbolicUtilsExt = "SymbolicUtils"
