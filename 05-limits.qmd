@@ -131,19 +131,21 @@ f(x) = sin(x) / x
 lim(f, 0)
 ```
 
-The (*right*) limit of $1/2$ is suggested by the following
+The limit of $1/2$ is suggested by the following
 
 ```{julia}
 f(x) = (1 - sin(x))/(pi/2 - x)^2
 lim(f, pi/2)
 ```
 
-The above will generate values just bigger than `pi/2` which are helpful to investigate the *right* limit. For a *left* limit, pass in `dir="-"`, as with
+The above will generate values just bigger than `pi/2` and just smaller than `pi/2` which are helpful to investigate the limit from *both* sides. For just a *left* limit, pass in `dir="-"`, as with
 
 ```{julia}
 lim(f, pi/2, dir="-")
 ```
 
+
+Similarly, pass in `dir="+"` to get just the right limit.
 
 ## Symbolic limits
 
@@ -163,7 +165,9 @@ f(x)
 ```
 
 
-To find the limit of an expression, `ex`, as a symbolic variable, `x`, goes towards some value `c`, `0` in the above example, is performed by the command `limit(ex, x => c)`. SymPy finds the right limit by default. A left limit can be asked for with the additional argument `dir="-"`.
+To find the limit of an expression, `ex`, as a symbolic variable, `x`, goes towards some value `c`, `0` in the above example, is performed by the command `limit(ex, x => c)`.
+
+SymPy finds the *right limit by default*. A left limit can be asked for with the additional argument `dir="-"`. Passing `dir="+-"` to SymPy asks for both the left and right limit and a test for their equality (e.g., the limit).
 
 
 
