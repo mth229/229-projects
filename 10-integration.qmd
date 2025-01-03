@@ -36,31 +36,16 @@ $$
 That is, the definite integral is found by evaluating a related
 function at the endpoints, $a$ and $b$.
 
-
 The `SymPy` package can compute many antiderivatives using a version
-of the [Risch algorithm](http://en.wikipedia.org/wiki/Risch\_algorithm) that works for [elementary functions](http://en.wikipedia.org/wiki/Elementary\_function). `SymPy`'s `integrate` function can be used to find an indefinite integral:
+of the [Risch algorithm](http://en.wikipedia.org/wiki/Risch\_algorithm) that works for [elementary functions](http://en.wikipedia.org/wiki/Elementary\_function). `SymPy`'s `integrate` function can be used to find an indefinite integral. However, we don't pursue that here, opting instead for *numeric* approximations to definite integrals.
 
-```{julia}
-f(x) = x^2
-@syms x
-integrate(f(x), x)
-```
-
-Or a definite integral by passing in values `a` and `b` through the grouping `(x,a,b)`:
-
-```{julia}
-integrate(f(x), (x, 0, 1))		# returns a "symbolic" number
-```
-
-
-However, this only works *if* there is a known antiderivative $F(x)$---which is not always the case. If not, what to do?
-
-In this case, we can appeal to the *definition* of the definite
-integral. For continuous non-negative $f(x)$, the definite integral
-is the area under the graph of $f$ over the interval $[a,b]$. For
-possibly negative functions, the indefinite integral is found by the
-*signed* area under $f$.  This area can be directly *approximated*
-using Riemann sums, or some other approximation scheme.
+To compute numeric approximations to definite integrals, we can appeal
+to the *definition* of the definite integral. For continuous
+non-negative $f(x)$, the definite integral is the area under the graph
+of $f$ over the interval $[a,b]$. For possibly negative functions, the
+indefinite integral is found by the *signed* area under $f$.  This
+area can be directly *approximated* using Riemann sums, or some other
+approximation scheme.
 
 
 The Riemann approximation for a definite integral uses approximating
@@ -76,7 +61,7 @@ sum(f.(xs)) * delta		# a new function `sum` to add up values in a container
 ```
 
 That value isn't very close to $1/3$. But we only took $n=5$
-rectangles $-$ clearly there will be some error.
+rectangles --- clearly there will be some error.
 
 ```{julia}
 plot(f, a, b; legend=false)
@@ -107,7 +92,7 @@ to adjust to a new problem.
 
 ----
 
-As the pattern is similar, it is fairly
+As the pattern to compute an approximate sum is similar, it is fairly
 easy to wrap the computations in a function for convenience. This is done for you in the `MTH229` package with the `riemann` function. The above would be done through:
 
 ```{julia}
@@ -157,8 +142,6 @@ the estimated maximum error is the second. In this case it is small
 In summary we consider here these functions to find definite
 integrals:
 
-* `integrate`---symbolically find a definite integral using the fundamental theorem of calculus, **if possible**.
-
 * `riemann`---approximate a definite integral using either Riemann sums or a related method.
 
 * `quadgk`---use Gauss quadrature approach to efficiently find approximations to definite integrals.
@@ -183,8 +166,9 @@ For example, the arc-length of the square root function between $[0, 4]$ is give
 
 ```{julia}
 f(x) = sqrt(x)
+a, b = 0, 4
 dL(x) = sqrt(1 + f'(x)^2)
-answer, err = quadgk(dL, 0, 4)
+answer, err = quadgk(dL, a, b)
 ```
 
 
@@ -209,8 +193,9 @@ volume in mm$^3$ is given by:
 
 ```{julia}
 r(h) = (37^2 - h^2)^(1/2)
+a, b = -37, 37
 dv(h) = pi * r(h)^2
-answer, err = quadgk(dv, -37, 37)
+answer, err = quadgk(dv, a, b)
 ```
 
 The volume in cubic inches, then is:

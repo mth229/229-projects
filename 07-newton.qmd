@@ -27,15 +27,15 @@ gr();
 
 Read about this material here: [Newton's Method](http://mth229.github.io/newton.html).
 
-Symbolic math - as is done behind the scenes at
-the Wolfram alpha web site - is pretty nice. For so many problems it
+Symbolic math --- as is done behind the scenes at
+the Wolfram alpha web site --- is pretty nice. For so many problems it
 can easily do what is tedious work. However, for some questions, only
 numeric solutions are possible. For example, there is no general
 formula to solve a fifth order polynomial the way there is a quadratic
 formula for solving quadratic polynomials. Even an innocuous
 polynomial like $f(x) = x^5 - x - 1$ has no easy algebraic solution for is one root.
 
-A graph shows what looks like just one answer between $1$ and $2$, closer to $1$
+A graph shows what looks like just one answer **between** $1$ and $2$, closer to $1$
 
 ```{julia}
 f(x) = x^5 - x - 1
@@ -46,7 +46,7 @@ plot!(zero, -2, 2)
 From this, we can call the bisection method to identify the value:
 
 ```{julia}
-fzero(f, -2, 2)
+fzero(f, 1, 2)
 ```
 
 We've seen the bisection method previously to find a root, but this
@@ -89,7 +89,7 @@ f'(x_0) = \frac{f(x_0) - 0}{x_0 - x_1}.
 $$
 
 
-Solving for $x_0$, this yields the update formula:
+Solving for $x_1$, this yields the update formula:
 
 
 $$
@@ -111,8 +111,8 @@ x = x - f(x) / f'(x)
 
 (We don't use indexing, but rather update our binding for the `x` variable.)
 
-Is `x` close to being the zero? We don't know the actual zero - we
-are trying to approximate it - but we do know the function's value at
+Is `x` close to being the zero? We don't know the actual zero --- we
+are trying to approximate it --- but we do know the function's value at
 the actual zero. For this new guess the function value is
 
 ```{julia}
@@ -120,7 +120,7 @@ f(x)
 ```
 
 This is much closer to $0$ than $f(1)$, the value at our initial guess, but
-not nearly as close as we can get using Newton's method. We just need to **iterate** -
+not nearly as close as we can get using Newton's method. We just need to **iterate** ---
 run a few more steps.
 
 We do another step just by running the last line. For example, we run 5 more steps by copying and pasting the same expression:
@@ -151,7 +151,7 @@ improve, we stop. Our value of `x` is an *approximate* zero and
 How do we know how to stop? When the algorithm works, we will stop
 when the `x` value *basically* stops updating, as `f(x)` is basically
 `0`. However, the algorithm need not work, so any implementation must
-keep track of how many steps are taken and stop when this gets out of
+keep track of how many steps are taken and should also stop when this gets out of
 hand.
 
 

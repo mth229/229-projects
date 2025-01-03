@@ -40,17 +40,19 @@ Of special note is that an absolute extrema involves *both* a function **and** a
 
 There are two theorems which help identify extrema here. The first,
 due to Bolzano, says that any continuous function on a *closed*
-interval will *necessarily* have an absolute maximum and minimum on that
-interval. The second, due to Fermat, tells us where to look: these
-absolute maximums and minimums can only occur at end points or
-critical points.
+interval will *necessarily* have an absolute maximum and minimum on
+that interval. The second, due to Fermat, tells us where to look:
+these absolute maximums and minimums can only occur at the end points
+of the interval or critical points of the function inside the
+interval.
 
 Bolzano and Fermat are historic figures. For us, we can plot a
 function to visually identify extrema. The value of Bolzano is the
 knowledge that yes, plotting isn't a waste of time, as we are
 *guaranteed* to see what we look for. The value of Fermat is that if
 we want to get *precise* numeric answers, we have a means: identify
-the end points and the critical points then compare  the function at *just* these values.
+the end points and the critical points then compare the function at
+*just* these values.
 
 ----
 

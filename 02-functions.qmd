@@ -7,7 +7,7 @@ engine: julia
 Read more about this [here](http://mth229.github.io/functions.html).
 
 
-For some problems herein, you  will need features  made  available in  the add-on `MTH229` package, which is loaded with  the following  command:
+For some problems in this project, you  will need features  made  available in  the add-on `MTH229` package, which is loaded with  the following  command:
 
 ```{julia}
 using MTH229
@@ -112,7 +112,7 @@ Don't worry about the words "generic" and "method", but be aware that
 because of this once you have defined a name as a variable it can not
 be re-purposed as a *generic* function name and vice versa. (In the
 common first case, read the error message, it will say something like:
-`ERROR: cannot define function a; it already has a value`.)
+`ERROR: cannot define function a; it already has a value`; in the second it might say `ERROR: invalid redefinition of constant`.)
 
 
 The "domain" of a `Julia` function is similar in meaning to its mathematical counterpart. `Julia` may respond with different values, such as `Inf`, for infinity; `NaN`, when an expression is indeterminate; or it may throw an error, typically a `DomainError`:

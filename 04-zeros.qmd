@@ -5,7 +5,7 @@ engine: julia
 
 Read about this topic here: [Solving for zeros with julia](http://mth229.github.io/zeros.html).
 
-These questions are related to the real zeros of a
+This project is about finding the real zeros of a
 real-valued function $f$. That is, those values of $x$ with
 $f(x)=0$.
 
@@ -41,7 +41,7 @@ $[0,1]$:
 ```{julia}
 f(x) = x^5 + x - 1
 plot(f, 0, 1)
-plot!(zero, 0, 1)
+plot!(zero)
 ```
 
 We can see that the zero is near $0.75$, but be careful reading too
@@ -50,8 +50,10 @@ typically even fewer points chosen, what looks like a curve is really
 just a stick figure if you zoom in far enough. Replotting over a
 smaller domain can give more accuracy, but it is better to use a graph
 to get a sense of what the desired answer is *near* or *between*  and then use a
-*numeric* method to "zoom" in on the answer. In this project we
-discuss one such method for "zooming in" – the *bisection method* - when the zero is between two values, such as in this plot where the zero is clearly between, say, $0$ and $1$.
+*numeric* method to "zoom" in on the answer. 
+
+In this project we
+discuss one such method for "zooming in" – the *bisection method* - when the zero is between two values, such as in this plot where the zero is clearly **between**, say, $0$ and $1$.
 
 
 #### The bisection method
@@ -86,7 +88,7 @@ graph. In such situations, numeric methods may be of interest.
 
 To illustrate the bisection method, we discuss one step. This step is then repeated until termination.
 
-Consider $f(x) = \sin(x)$. A graph shows plainly that there is a zero between $3$ and $4$. Formally, as $\sin(3) > 0$ and $\sin(4) < 0$ and the $\sin(x)$ function is continuous, this zero is guaranteed by Bolzano. The algorithm works by taking this observation of a bracketing interval ($[3,4]$) and reducing it in size by half at each step.
+Consider $f(x) = \sin(x)$. A graph shows plainly that there is a zero **between** $3$ and $4$. Formally, as $\sin(3) > 0$ and $\sin(4) < 0$ and the $\sin(x)$ function is continuous, this zero is guaranteed by Bolzano. The algorithm works by taking this observation of a bracketing interval ($[3,4]$) and reducing it in size by half at each step.
 
 Let $[a,b] = [3,4]$ and $c = (a+b)/2 = 3.5$ be the mid-point. The value of $f(c)$ must either be negative, positive, or zero. If $f(c)$ is zero, we are done -- a zero to $f$ between $[a,b]$ was identified. Otherwise, either $f(a)$ and $f(c)$ or $f(c)$ and $f(b)$ have different signs. Form a new interval $[a,c]$ in the first case and $[c,b]$ in the second. This interval is half the size and has the same property of bracketing the guaranteed zero. The algorithm iterates this step until termination.
 
@@ -148,7 +150,7 @@ fzero(eqn, 0, 100)
 Many problems are more naturally expressed by solving $f(x) = g(x)$,
 and not $f(x) = 0$, as expected by `fzero`. This is no issue, as it
 only requires the extra step of defining a function of the differences
-$eqn(x) = f(x) - g(x)$, as $u(x) = 0$ implies $f(x) = g(x)$.
+$eqn(x) = f(x) - g(x)$, as $eqn(x) = 0$ implies $f(x) = g(x)$.
 
 For example, find the intersection point of $4 - e^{x/10} = e^{x/15}$.
 
@@ -162,7 +164,7 @@ We could plot both functions:
 f(x) = 4 - exp(x/10)
 g(x) = exp(x/15)
 plot(f, 0, 20)
-plot!(g, 0, 20)
+plot!(g)
 ```
 
 Or we could plot the difference:
@@ -170,7 +172,7 @@ Or we could plot the difference:
 ```{julia}
 eqn(x) = f(x) - g(x)
 plot(eqn, 0, 20)
-plot!(zero, 0, 20)
+plot!(zero)
 ```
 
 From *either* graph, we see quickly that the interval $[5,10]$ will be
