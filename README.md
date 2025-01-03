@@ -20,7 +20,7 @@ Question and answers are now presented and completed through  `WeBWorK`.
 
 There  are a few idiosyncracies to be aware of when navigating between `WeBWorK` and the `Jupyter` interface:
 
-*  The code examples  are typeset in `WeBWorK` as though they  appear in  a *terminal*. A terminal displays  the output of  each  command immediately after execution. In a notebook,  when  a cell  is executed, all the  commands are computed and *only*  the  last  value is shown. (The use of `@show` or `print(...)` can be used to display intermediate values in a  cell.)
+*  Most code examples  are typeset in `WeBWorK` as though they  appear in  a *terminal*. A terminal displays  the output of  each  command immediately after execution. In a notebook,  when  a cell  is executed, all the  commands are computed and *only*  the  last  value is shown. (The use of `@show` or `print(...)` can be used to display intermediate values in a  cell.)
 
 * Copy and paste from `WeBWorK` into a notebook will usually be unsuccessful, as  numbers  in the  font  used to display computer markup do not copy as ASCII numbers  into a cell. The numbers can be hand edited though.
 

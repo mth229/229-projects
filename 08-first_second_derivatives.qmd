@@ -1,5 +1,5 @@
 ---
-engine: julia
+jupyter: julia-1.11
 ---
 # Exploring first and second derivatives with Julia
 
@@ -67,7 +67,7 @@ We investigate these concepts in `Julia` both graphically and numerically.
 
 For the graphical exploration, the `plotif` function from the `MTH229` package is quite useful.
 
-It is used to plot a function `f` using two colors; the color choice depending on whether the second function, `g` is non-negative or not. (Basically it does `plot(f, a, b); plot!(x -> g(x) >= 0.0 ? f(x) : NaN, a, b)`.)
+It is used to plot a function `f` using two colors; the color choice depending on whether the second function, `g` is non-negative or not.
 
 
 This function can be used to graphically illustrate where the graph of `f` is *positive*, *increasing*, or *concave up*:

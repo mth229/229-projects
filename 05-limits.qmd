@@ -1,5 +1,5 @@
 ---
-engine: julia
+jupyter: julia-1.11
 ---
 # Investigating limits with Julia
 
@@ -43,7 +43,7 @@ indeterminate at `c`. For such cases we need to do more work to
 identify if any such $L$ exists and when it does, what its value is.
 
 
-In this project, we investigate limits three ways: graphically, with a table of numbers, and analytically, developing the inituition of  limits along the way.
+In this project, we investigate limits three ways: graphically, with a table of numbers, and analytically, developing the inituition of limits along the way.
 
 
 #### Graphical approach

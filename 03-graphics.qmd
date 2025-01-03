@@ -1,5 +1,5 @@
 ---
-engine: julia
+jupyter: julia-1.11
 ---
 
 # Graphing functions with Julia
@@ -9,9 +9,9 @@ Read about this here: [Graphing Functions with Julia](http://mth229.github.io/gr
 `Julia` has several packages that allow for
 graphical presentations, but nothing "built-in."
 
-Several reasonable options exist, but these are the two most common:
+Several reasonable options exist, but these are the two most common packages used:
 
-* `Plots` which offers a unified front end to several different plotting backends (`pyplot` or `matplotlib`;  `GR`; `plotly`; `unicodeplots`; and others).  Plots has a recipe system that makes  it  easier to add default plots to many object types. We will utilize the interface for functions. In the following we call `plotly()` to set the Plotly backend for web-based graphics. This sometimes fails due to JavaScript issues. The `gr()` backend produces static graphics and is available.
+* `Plots` which offers a unified front end to several different plotting backends (`pyplot` or `matplotlib`;  `GR`; `plotly`; `unicodeplots`; and others).  Plots has a recipe system that makes  it  easier to add default plots to many object types. We will utilize the interface for functions. In the following we call `plotly()` to set the Plotly backend for web-based graphics. This sometimes fails due to JavaScript issues. The `gr()` backend produces static graphics and is available by default.
 
 * `Makie` which offers the most  advanced  graphics interface, especially for 3-d  graphics.  It will *likely* be the default choice for `Julia` users at some point.
 
@@ -72,7 +72,7 @@ plot!(zero)
 
 
 The legend can be suppressed by specifying `legend=false` to the first
- plot; e.g.  `plot(sin,0, 2pi, legend=false)`.
+ plot; e.g.  `plot(sin,0, 2pi, legend=false)`. There is not need to add limits to the `plot!` command if the existing viewing window, $[a,b]$, is desired.
 
 
 
@@ -93,14 +93,13 @@ plot(xs, ys)
 ```
 
 The `xs` and `ys` are written as though they are "plural" because
-these variables contain 50 values each in a container (a vector in
-this case). The function call `sin.(xs)` adds a "dot" to the parentheses. This syntax instructs `Julia` to "broadcast" `sin` to *each* value in the container `xs`.
+these variables contain 50 values each in a container. The function call `sin.(xs)` adds a "dot" to the parentheses. This syntax instructs `Julia` to "broadcast" `sin` to *each* value in the container `xs`.
 
 The plot "recipe" for plotting functions provided  by `Plots`  does a bit more than this, as it adaptively specifies the points to plot.
 
 
 
-The  `scatter!` function can be used to add points to a graph. These are specified as collections of `x` and `y` values.
+The  `scatter!` function can be used to add points to a graph. These may be specified as collections of `x` and `y` values, as above.
 
 
 
@@ -111,7 +110,7 @@ The  `scatter!` function can be used to add points to a graph. These are specifi
 The value `NaN` is a floating point value that arises during some
 indeterminate operations, such as `0/0`. The `plot` function will stop
 connecting the dots when it encounters an `NaN` value. This convention
-can be gainfully employed to introduce breaks in a graph.
+can be gainfully employed to introduce breaks, or discontinuities, in a graph.
 
 
 
@@ -126,9 +125,9 @@ For reqular patterns the colon operator
 can be used: `1:5` is essentially  `[1,2,3,4,5]`. If  the gap  between succesive  numbers is not  `1`, but, say, `h`,  it  can be set  with the syntax  `a:h:b`.
 
 The `range` function is also used to specify regular patterns, as in:
-`range(a, b, n)`, which specified `n` points from `a` to `b`.  Using the colon syntax or the `range` function
-only creates a means to generate values, rather than the values
-themselves.
+`range(a, b, n)`, which specified `n` evenly spaced points from `a` to
+`b`.  Using the colon syntax or the `range` function only creates a
+means to generate values, rather than the values themselves.
 
 Collections of values are useful for many reasons. We will
 see later how they are used to store the zeros of a function.

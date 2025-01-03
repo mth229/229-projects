@@ -1,5 +1,5 @@
 ---
-engine: julia
+jupyter: julia-1.11
 ---
 # Using Julia as a calculator
 
@@ -8,7 +8,7 @@ engine: julia
 
 Read about this material here: [Julia as a calculator](http://mth229.github.io/calculator.html).
 
-For the impatient, these questions cover the use of `Julia` to replace what a calculator can do.
+For the impatient, this project covers the use of `Julia` to replace what a calculator can do.
 
 #### Using Jupyter
 
@@ -93,7 +93,9 @@ x = 42
 
 Names can be reassigned and repurposed. *However*, a function name can
 not be repurposed as a variable name and a variable name can not be
-repurposed as a function name. You will get an `ERROR` message if this
+repurposed as a function name. 
+
+You will get an `ERROR` message if this
 is tried. (A suggestion is to use longer descriptive names or follow
 math conventions: use `x`, `y`, `z`, ... for variables; `f` and `g`
 for functions; and `a`,`b`, ... for parameters, though even then
@@ -105,6 +107,8 @@ For assigning more than one value at once, commas can be used as with:
 ```{julia}
 a, b, c = 1, 2, 3
 ```
+
+The equals sign, `=`, in computer languages is **not** the same, as it is in mathematics. In math it typically sets up an equation. On the computer it is reserved for **assignment**. As such only a limited number of expressions can occur on the *left*-hand side --- things being assigned.
 
 #### Julia, like math, has different number types
 
@@ -134,7 +138,9 @@ Scientific notation represents real numbers as $\pm a \cdot 10^b$, where
 $b$ is an integer, and $a$ may be a real number in the range $[1.0, 10)$.
 In `Julia` such numbers are represented with an `e` to replace
 the 10, as with `1.2e3` which would be $1.2 \cdot 10^3$ (better known as 1,230) or
-`3.2e-1`, which would be $3.2 \cdot 10^{-1}$ (which is equal to $0.32$). Take note that this $e$ is not the special base of the natural logarithm, but is just notation indicating a power of $10$. To use this notation, you must have a number immediately before the "e", not a space or an asterisk. That is, these are **not correct:** `1.2*e3` or `12 e 3`.
+`3.2e-1`, which would be $3.2 \cdot 10^{-1}$ (which is equal to $0.32$). 
+
+Take note that this $e$ is not the special base of the natural logarithm, but is just notation indicating a power of $10$. To use this notation, you must have a number immediately before the "e", not a space or an asterisk. That is, these are **not correct:** `1.2*e3` or `12 e 3`.
 
 ----
 
