@@ -1,5 +1,5 @@
 ---
-engine: julia
+jupyter: julia-1.11
 ---
 # Newton's method
 

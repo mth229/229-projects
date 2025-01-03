@@ -1,5 +1,5 @@
 ---
-engine: julia
+jupyter: julia-1.11
 ---
 # Exploring first and second derivatives with Julia
 
